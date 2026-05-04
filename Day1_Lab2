@@ -1,0 +1,91 @@
+Round 1 Prompt:
+Build user authentication system and add login and registration with password management system for web app
+
+Round 2 Promt :
+You are a senior software engineer experienced in Node.js, SQL, and secure authentication systems.
+
+Build a user authentication web app with the following:
+1-Validate email format
+2-Add Password rules (min 8 char)
+3-Check is the user exist
+4-Generate and return JWT token
+
+Tech Stack:
+React + TypeScript frontend
+Node.js/Express backend
+PostgreSQL database
+Error handling and Success Criteria:
+Success:User can register, login, and reset password within 2 seconds each
+Errors:Invalid email, wrong password, account locked, network timeout, server 500"
+
+Round 3 Promt :
+
+You are a senior full-stack software engineer experienced in secure authentication systems.
+
+Build a production user authentication web app.
+
+Tech Stack
+- Frontend: React + TypeScript
+- Backend: Node.js / Express
+- Database: PostgreSQL
+- Authentication: JWT
+- Password hashing: bcrypt
+
+Core Features
+1. User registration
+2. User login
+3. Password reset
+4. Password change
+5. Protected routes
+6. Logout
+
+Registration Requirements
+- Validate name, email, password, and confirmPassword
+- Name is required
+- Email must be valid
+- Password must be at least 8 characters
+- Password must include:
+  - 1 uppercase letter
+  - 1 lowercase letter
+  - 1 number
+- confirmPassword must match password
+- Check if the user already exists
+- Hash password with bcrypt before saving
+
+Login Requirements
+- Validate email format
+- Compare password with hashed password
+- Return JWT token after successful login
+- Token expires in 24 hours
+
+Password Reset
+- Add forgot password 
+- Allow user to set a new password
+- New password must follow the same password rules
+
+Security Requirements
+- Never store plain text passwords
+- Use generic login error: "Invalid email or password"
+- Add rate limiting: max 5 failed login attempts per hour
+- Lock account temporarily after too many failed attempts
+- Validate all user inputs
+
+API Endpoints
+Create these endpoints:
+
+- POST /api/auth/register
+- POST /api/auth/login
+- POST /api/auth/forgot-password
+- POST /api/auth/reset-password
+- POST /api/auth/change-password
+- POST /api/auth/logout
+
+Request Example
+
+json
+{
+  "name": "Bade Balcı",
+  "email": "user@example.com",
+  "password": "Password123",
+  "confirmPassword": "Password123"
+}
